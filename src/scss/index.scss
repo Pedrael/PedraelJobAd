@@ -1,6 +1,104 @@
 // segments
 // check src/framework/scss/global-scaler.scss if you are not fullhd
 @charset "UTF-8";
-@import "./../framework/scss/fonts/NeoSans.scss"; // fonts
+@import "./../framework/scss/fonts/RubikOne.scss"; // fonts
 @import "./../framework/scss/main.scss"; // framework
-@import "./segments/test.scss";
+
+$scaler: 0.9;
+
+* {
+    z-index: 1;
+}
+
+.whole-content {
+    position: relative;
+    background: #F0F0F0;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    @include _phone-big {
+        align-items: center;
+    }
+}
+
+.stack-array {
+    background: #2a2a2e;
+    width: 100%;
+    @include height(322, $scaler);
+    @include margin-padding(('p-l': (130 $scaler) ));
+
+    .item {
+        width: auto;
+        @include height(120, $scaler);
+        @include margin-padding(('m-l': (22 $scaler), 'm-r': (22 $scaler) ));
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    @include _phone-big {
+        padding: 0 20px;
+        justify-content: space-around;
+    }
+}
+
+.title {
+    font-family: 'Rubik One';
+    color: #2a2a2e;
+    @include FontLineSize(0.35, 0.35, 0.3, 72, 10);
+    @include margin-padding(('m-l': (170 $scaler) ));
+
+    .purple {
+        color: #9B2DC2;
+    }
+
+    @include _phone-big {
+        margin: 0;
+    }
+}
+
+.code-block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    @include width(865, 1.1);
+    background-image: url('../img/code.png');
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    @include _phone-big {
+        width: 100%;
+        z-index: 0;
+        opacity: 0.4;
+    }
+}
+
+.credentials-array {
+    @include width(360, 0.5);
+    @include height(48, 0.5);
+    @include margin-padding(('m-l': (360 $scaler) ));
+
+    img {
+        @include height(48, 0.5);
+        width: auto;
+
+        &:hover {
+            filter: invert(23%) sepia(27%) saturate(6789%) hue-rotate(272deg) brightness(98%) contrast(95%);
+        }
+    }
+
+    @include _phone-big {
+        margin: 0;
+    }
+
+    svg path {
+        fill: #2a2a2e; 
+        &:hover {
+            fill: #9B2DC2;
+        }
+    }
+}
