@@ -67,16 +67,16 @@ module.exports = {
         use: ['raw-loader']
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]'
-            }
-          }
-        ]
-      }
+        test: /\.(woff|woff2|ttf|otf)$/,
+        loader: 'base64-inline-loader',
+        include: path.resolve(__dirname, 'src/fonts'),
+  
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/',
+          publicPath: url => 'fonts/' 
+        }
+      },
     ]
   },
   plugins: [
@@ -101,7 +101,6 @@ module.exports = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js', // 'vue/dist/vue.common.js' for webpack 1
-      'fonts': path.resolve(__dirname, 'src/fonts')
     }
   }
 };

@@ -46,6 +46,7 @@ $scaler: 0.9;
 
 .title {
     font-family: 'Rubik One';
+    font-weight: 400;
     color: #2a2a2e;
     @include FontLineSize(0.35, 0.35, 0.3, 72, 10);
     @include margin-padding(('m-l': (170 $scaler) ));
@@ -94,11 +95,21 @@ $scaler: 0.9;
     @include _phone-big {
         margin: 0;
     }
+}
 
-    svg path {
-        fill: #2a2a2e; 
-        &:hover {
-            fill: #9B2DC2;
-        }
-    }
+.popup-window {
+    position: absolute;
+    visibility: hidden;
+    transition: 0.75s;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    @include FontLineSize(0.3, 0.3, 0.4, 36, 10);
+    color: #f0f0f0;
+    background-color: #2a2a2e;
+    font-family: 'Roboto';
+    font-weight: 500;
+    @include width(402, 0.5);
+    @include height(76, 0.5);
+    border-radius: 0px RelativeUnits(30, 0.5) 0px 0px;
 }

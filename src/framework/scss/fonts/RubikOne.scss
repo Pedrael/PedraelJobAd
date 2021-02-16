@@ -1,17 +1,17 @@
 @font-face {
-    font-family: 'Rubik One', sans-serif;
-    src: url("fonts/Rubik/RubikOne.ttf") format("woff");
-    src: url("fonts/Rubik/RubikOne.ttf") format("woff2");
-    src: url("fonts/Rubik/RubikOne.ttf") format("truetype");
+    font-family: 'Rubik One';
+    src: url("../fonts/Rubik/RubikOne.ttf") format("woff");
+    src: url("../fonts/Rubik/RubikOne.ttf") format("woff2");
+    src: url("../fonts/Rubik/RubikOne.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat', sans-serif;
-    src: url("fonts/Montserrat/Montserrat.ttf") format("woff");
-    src: url("fonts/Montserrat/Montserrat.ttf") format("woff2");
-    src: url("fonts/Montserrat/Montserrat.ttf") format("truetype");
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto/Roboto-Medium.ttf") format("woff");
+    src: url("../fonts/Roboto/Roboto-Medium.ttf") format("woff2");
+    src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
